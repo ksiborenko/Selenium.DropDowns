@@ -17,7 +17,6 @@ public class Currency {
 
     public void test() {
         this.driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
-        this.driver.manage().window().fullscreen();
         WebElement dropList = this.driver.findElement(By.xpath("//select[@name='ctl00$mainContent$DropDownListCurrency']"));
         Select list = new Select(dropList);
         list.selectByIndex(3);

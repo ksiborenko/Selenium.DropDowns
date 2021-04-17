@@ -16,13 +16,11 @@ public class Country {
 
     public void test() throws InterruptedException {
         this.driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
-        WebElement text = this.driver.findElement(By.xpath("//input[@id='autosuggest']"));
-        text.click();
-        text.sendKeys("pol");
-        Thread.sleep(2000);
+        this.driver.findElement(By.xpath("//input[@id='autosuggest']")).sendKeys("pol");
+        Thread.sleep(1000);
         List<WebElement> options = this.driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
         for (WebElement option : options) {
-            if (option.getText().equalsIgnoreCase("Poland")) {
+            if (option.getText().equalsIgnoreCase("poland")) {
                 option.click();
                 break;
             }
