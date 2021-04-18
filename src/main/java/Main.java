@@ -49,7 +49,7 @@ public class Main {
     }
 
     @Test
-    public void fromTo() {
+    public void fromTo() throws InterruptedException {
         this.fromTo.test();
     }
 
